@@ -19,7 +19,6 @@ if __name__ == "__main__":
             last = i
 
     # Рачёт суммы после последнего отрицательного числа
-    print(sum)
     sum = sum([int(item) for i, item in enumerate(list_1) if i > last])
     
     # Вывод результатов
