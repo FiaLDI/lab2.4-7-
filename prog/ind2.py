@@ -5,7 +5,7 @@ import sys
 
 
 if __name__ == "__main__":
-    list_1 = [5.0, 5.5, 3.5, 6.5, -8.0, 7.5, 7.0, -8.5, 9.0, 9.5]
+    list_1 = list(map(float, input().split()))
     
     # Ввод числа C
     C = int(input("Введите значение для числа C:"))
@@ -19,9 +19,8 @@ if __name__ == "__main__":
             last = i
 
     # Рачёт суммы после последнего отрицательного числа
-    sum = 0
-    for i, item in enumerate(list_1[last + 1:]):
-        sum += int(item)
+    print(sum)
+    sum = sum([int(item) for i, item in enumerate(list_1) if i > last])
     
     # Вывод результатов
     print(f"Количество элементов меньше (C = {C}) = {count}")
